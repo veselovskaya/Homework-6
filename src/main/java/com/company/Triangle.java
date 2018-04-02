@@ -7,9 +7,9 @@ public class Triangle {
     private int c;
 
     public Triangle(int a, int b, int c){
-        if (!(a+b>c && a+c>b && b+c>a))
+        if (!( a + b >c && a + c> b && b + c > a))
             throw new IllegalArgumentException("Треугольник не существует");
-        if ((a > 0)&&(b > 0)&&(c > 0)){
+        if ((a > 0) && (b > 0) && (c > 0)){
             this.a=a;
             this.b=b;
             this.c=c;
@@ -25,6 +25,10 @@ public class Triangle {
 
     public boolean isTriangleRight(){
         return (((a * a + b * b) == (c * c)) || ((b * b + c * c) == (a * a)) || ((a * a + c * c) == (b * b)));
+    }
+
+    public String toString() {
+        return "Треугольник со сторонами: " + a + " " + b + " " + c;
     }
 
     public int getA() {
